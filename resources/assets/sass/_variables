@@ -1,0 +1,9 @@
+$borderColor:#ebebeb;
+$searchColor:#f3f3f3;
+$headerColor:#3c3c3c;
+$fontColor:#797979;
+$red:#fa3e3e;
+$contentAreaBackground:#f6f6f6;
+$messengerBackground: #0178ff;
+$messengerHeaderArea:#32aeff;
+$messengerSearchArea:#1e88f4;

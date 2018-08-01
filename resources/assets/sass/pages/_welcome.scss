@@ -1,0 +1,72 @@
+.app-container.welcome-page{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .authentication-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: white;
+    width:100%;
+    max-width: 300px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .auth-container{
+      width: 100%;
+      max-width: 200px;
+    }
+    .button{
+      cursor: pointer;
+      height: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        &.facebook-btn{
+          background: #8b9dc3;
+        }
+        &.google-btn{
+          background: #f65314;
+        }
+        &.email{
+          border: 1px solid #797979;
+          color: #797979;
+        }
+      }
+    }
+    .google-btn{
+      background: #db3236;
+    }
+    .facebook-btn{
+      background: #3b5998;
+    }
+    .email{
+      border: 1px solid black;
+      text-decoration: none;
+    }
+  }
+  .welcome-container{
+    background: white;
+    padding: 10px;
+    h1{
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    h3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+  }
+}

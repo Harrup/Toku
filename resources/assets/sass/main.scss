@@ -1,0 +1,109 @@
+@import url( 'https://fonts.googleapis.com/css?family=Lily+Script+One|Roboto:100,300,400,500,700');
+@import "reset";
+@import "variables";
+@import "pages/welcome.scss";
+@import "pages/home.scss";
+@import "pages/profile.scss";
+@import "auth/authorization.scss";
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d24074+0,1268c3+100 */
+  background: #d24074; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #d24074 0%, #1268c3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #d24074 0%,#1268c3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #d24074 0%,#1268c3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d24074', endColorstr='#1268c3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#app{
+  width: 100%;
+}
+
+.app-container{
+  background: white;
+  width: 100%;
+  max-width: 1125px;
+  height: calc(100vh - 20vh);
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input[type="text"],.input-field{
+  padding: 5px 15px;
+  width: 100%;
+  color: $fontColor;
+  background-color: $searchColor;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+label{
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.message-box{
+  display: none;
+  background: red;
+  color: white;
+  padding:15px;
+  margin-bottom: 1rem;
+  &.active{
+    display: block;
+  }
+}
+
+.default-form{
+  .form-grp{
+    & >.error{
+      border: 1px solid $red;
+    }
+    button{
+      width: 100%;
+      background: rgb(30,136,244); /* Old browsers */
+      background: -moz-linear-gradient(-45deg, rgba(30,136,244,1) 0%, rgba(50,174,255,1) 100%, rgba(50,174,255,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      font-size: 1rem;
+      padding: 20px 0;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+.notification-message{
+  background: #59c136;
+  padding: 15px;
+  color: white;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  &.active{
+    display: block;
+  }
+}

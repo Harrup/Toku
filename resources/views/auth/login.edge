@@ -1,0 +1,59 @@
+@layout('layouts/emptyCanvas')
+
+@section('title')
+Toku - login
+@endsection
+
+@section('page-class')
+auth-class
+@endsection
+
+@section('app-container-styling')
+
+@endsection
+
+@section('content')
+<div class="auth-page">
+  <div class="auth-form">
+    <h1>Toku</h1>
+    <div class="message-box
+      @if(hasErrorFor('email')||hasErrorFor('password'))
+        active
+      @endif
+    ">
+      @if(hasErrorFor('email'))
+        {{getErrorFor('email')}}
+      @endif
+      @if(hasErrorFor('password'))
+        {{getErrorFor('password')}}
+      @endif
+    </div>
+    <form action="/login" method="POST" class="default-form">
+      {{csrfField()}}
+      <div class="form-grp">
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="{{old('email','')}}" class="input-field
+          @if(hasErrorFor('email'))
+            error
+          @endif
+        ">
+      </div>
+      <div class="form-grp">
+        <label for="password">Password:</label>
+        <input type="password" name="password" value="" class="input-field
+          @if(hasErrorFor('password'))
+            error
+          @endif
+        ">
+      </div>
+      <div class="form-grp">
+        <button type="submit">Login</button>
+      </div>
+      <hr>
+      <a class="btn" href="/register">register</a>
+      <a href="/forgot-password">I forgot my password</a>
+    </form>
+  </div>
+  <div class="image" style="background:url('https://images.pexels.com/photos/745045/pexels-photo-745045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350');background-position:center center;background-repeat:none;background-size:cover;"></div>
+</div>
+@endsection

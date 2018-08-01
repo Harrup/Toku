@@ -1,0 +1,76 @@
+@layout('layouts/app_server')
+
+@section('title')
+Toku - Home
+@endsection
+
+@section('notifications')
+  <div class="notification-message
+  @if(flashMessage('notification'))
+    active
+  @endif
+    ">
+    {{flashMessage('notification')}}
+  </div>
+@endsection
+
+@section('page-class')
+home-page
+@endsection
+
+@section('content-area')
+
+<div class="status-area">
+  <div class="post-box">
+    <textarea name="status" rows="8" cols="80" placeholder="Write something"></textarea>
+    <div class="user-img"></div>
+    <div class="buttons">
+      <div class="button">
+        <a><i class="fas fa-camera"></i></a>
+      </div>
+      <div class="button">
+        <a><i class="fas fa-video"></i></a>
+      </div>
+      <div class="button send-btn">
+        <a><i class="fas fa-paper-plane"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="updates">
+  <div class="update-container">
+    <div class="author-info">
+      <a href="#" class="author-image"></a>
+      <div class="author-name"><a href="#">Damjan Cvetkov</a> shared a <a href="#">story</a></div>
+      <div class="update-time">1hr</div>
+    </div>
+    <div class="media-image" style="background: url('https://images.unsplash.com/photo-1532121032426-855c544b816f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9e58c9a24299191000624b06d5579979&auto=format&fit=crop&w=800&q=60') no-repeat center center;background-size: cover;"></div>
+    <div class="padding-container">
+      <div class="grey-container">
+        <h3>These photos are why I am trapped in Tokyo forever know</h3>
+        <p>Tokyo has 39 million residents, 50% more people than any other urban area, with a $2.5 trillion economy larger than that ...</p>
+        <hr>
+        <div class="update-stats">
+          <div class="emoji-area">
+            <a class="emoji" href="#"><i class="fas fa-thumbs-up"></i></a>
+          </div>
+          <div class="likes">Sarah Russel and 23 others liked</div>
+          <div class="comments-stats">4 comments</div>
+        </div>
+        <hr>
+        <div class="comment-section">
+          <textarea name="comment" rows="8" cols="60"></textarea>
+          <div class="button-share">
+            <i class="fas fa-share"></i>
+          </div>
+          <div class="button-thumbsup">
+            <i class="fas fa-thumbs-up"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+@endsection

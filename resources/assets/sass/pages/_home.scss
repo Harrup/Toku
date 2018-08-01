@@ -1,0 +1,587 @@
+.app-container.home-page{
+  display: grid;
+  grid-template-columns: 15% 65% 20%;
+  #left-menu{
+    border-right: 2px solid $borderColor;
+    .account-dropdown{
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      padding: 15px;
+      .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fab{
+          font-size: 2rem;
+        }
+      }
+      .name{
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .fas{
+          font-size: 0.8rem;
+        }
+      }
+    .dropdown{
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 100%;
+      background: white;
+      -webkit-box-shadow: 0px 1px 4px 0px rgba(128,123,128,1);
+      -moz-box-shadow: 0px 1px 4px 0px rgba(128,123,128,1);
+      box-shadow: 0px 1px 4px 0px rgba(128,123,128,1);
+      transition: all 0.4s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      nav{
+        a{
+          display: block;
+          padding: 12px;
+          font-size: 0.8rem;
+          text-decoration: none;
+          color: $fontColor;
+        }
+      }
+      &.active{
+        opacity: 1;
+        visibility: visible;
+        bottom: -63px;
+      }
+    }
+  }
+}
+
+  .groups{
+    padding: 15px;
+    .group{
+      .title{
+        padding: 10px 0;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      ul{
+        li{
+          font-size: 0.8rem;
+          color: $borderColor;
+          padding: 10px 0;
+        }
+        }
+      }
+    }
+
+    #content-container{
+      overflow: hidden;
+      .search-header{
+        position: relative;
+        -webkit-box-shadow: 0px 1px 4px 0px rgba(128,123,128,1);
+        -moz-box-shadow: 0px 1px 4px 0px rgba(128,123,128,1);
+        box-shadow: 0px 1px 4px 0px rgba(128,123,128,1);
+        overflow: hidden;
+        .search-box{
+          padding: 10px;
+          color: $searchColor;
+          width: 500px;
+          margin: 0 auto;
+          input[type="text"]{
+            margin-bottom: 0;
+          }
+        }
+        .icon-section{
+          position: absolute;
+          top: 18px;
+          right: 10px;
+          .icon{
+            display: inline-block;
+            color: $fontColor;
+            font-size: 1rem;
+            padding: 0 4px;
+            position: relative;
+          }
+          .noti{
+            display: none;
+            border: 1px solid white;
+            color: white;
+            position: absolute;
+            background: $red;
+            top:-9px;
+            right:-6px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            padding: 2px;
+            &.active{
+              display:block;
+            }
+          }
+        }
+      }
+      .content-area{
+        width: 100%;
+        box-sizing: content-box;
+        overflow: auto;
+        height:calc(100% - 55px);
+        padding: 0 9px 0 0px;
+        .status-area{
+          .post-box{
+            padding: 35px 10px;
+            margin: 0 auto;
+            width: 500px;
+            position: relative;
+            textarea{
+              width: 100%;
+              color: $fontColor;
+              background-color: $searchColor;
+              border: none;
+              border-radius: 4px;
+              padding: 15px 40px;
+            }
+              .user-img{
+                position: absolute;
+                top: 22px;
+                left: -4px;
+                height: 30px;
+                width: 30px;
+                border: 1px solid white;
+                border-radius: 50%;
+                background: url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6") no-repeat center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+              }
+              .buttons{
+                position: absolute;
+                right: 10px;
+                bottom: 12px;
+                display: flex;
+              .button{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  bottom: 17px;
+                  height: 35px;
+                  width: 35px;
+                  margin:6px;
+                  font-size: 0.9rem;
+                  color: $fontColor;
+                  border: 1px solid white;
+                  border-radius: 50%;
+                  background: white;
+                  -webkit-box-shadow: 0px 1px 4px 0px rgba(128,123,128,1);
+                  -moz-box-shadow: 0px 1px 4px 0px rgba(128,123,128,1);
+                  box-shadow: 0px 1px 4px 0px rgba(128,123,128,1);
+                  .fa-paper-plane{
+                    transform: rotate(55deg);
+                  }
+                  &.send-btn{
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e88f4+0,32aeff+100,32aeff+100 */
+                    background: rgb(30,136,244); /* Old browsers */
+                    background: -moz-linear-gradient(-45deg, rgba(30,136,244,1) 0%, rgba(50,174,255,1) 100%, rgba(50,174,255,1) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(-45deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(135deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e88f4', endColorstr='#32aeff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                }
+              }
+            }
+          }
+        }
+        #updates{
+          margin: 0 auto;
+          max-width: 530px;
+          width: 100%;
+          // overflow-x: scroll;
+          // height: 130px;
+          .update-container{
+            .author-info{
+              position: relative;
+              display: flex;
+              align-items: center;
+              margin-bottom: 10px;
+              padding: 0 15px;
+              margin-top: 1.5rem;
+              .author-image{
+                display: inline-block;
+                height: 25px;
+                width: 25px;
+                border: 1px solid white;
+                border-radius: 50%;
+                background: url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6") no-repeat center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+              }
+              .author-name{
+                display: inline-block;
+                color: $fontColor;
+                font-size: 0.9rem;
+                a{
+                  font-weight: 700;
+                  text-decoration: none;
+                  color: black;
+                  margin: 0 10px;
+
+                }
+              }
+              .update-time{
+                display: inline-block;
+                font-size: 0.9rem;
+                color: $fontColor;
+              }
+            }
+
+            .media-image{
+              display: inline-block;
+              z-index: 10;
+              height: 200px;
+              width: 100%;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              -webkit-box-shadow: -3px 30px 58px -32px rgba(0,0,0,0.75);
+              -moz-box-shadow: -3px 30px 58px -32px rgba(0,0,0,0.75);
+              box-shadow: -3px 30px 58px -32px rgba(0,0,0,0.75);
+            }
+            .padding-container{
+              padding: 0 15px;
+              .grey-container{
+                background: $contentAreaBackground;
+                padding: 15px;
+                -webkit-box-shadow: -3px 30px 109px -36px rgba(0,0,0,0.75);
+                -moz-box-shadow: -3px 30px 109px -36px rgba(0,0,0,0.75);
+                box-shadow: -3px 30px 109px -36px rgba(0,0,0,0.75);
+                h3{
+                  color: black;
+                  font-size: 1rem;
+                  text-transform: uppercase;
+                  line-height: 1.5;
+                  padding: 30px 0 20px 0;
+                }
+                p{
+                  color: $fontColor;
+                  font-size: 0.8rem;
+                  line-height: 1.5;
+                }
+                .update-stats{
+                  display: flex;
+                  align-items: center;
+                  .emoji-area{
+                    padding-right: 10px;
+                    .emoji{
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 0.8rem;
+                      color: white;
+                      height: 35px;
+                      width: 35px;
+                      border-radius: 50%;
+                      -moz-background-size: cover;
+                      -o-background-size: cover;
+                      background-size: cover;
+                      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e88f4+0,32aeff+100,32aeff+100 */
+                      background: rgb(30,136,244); /* Old browsers */
+                      background: -moz-linear-gradient(-45deg, rgba(30,136,244,1) 0%, rgba(50,174,255,1) 100%, rgba(50,174,255,1) 100%); /* FF3.6-15 */
+                      background: -webkit-linear-gradient(-45deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                      background: linear-gradient(135deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e88f4', endColorstr='#32aeff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                    }
+                  }
+                  .likes{
+                    font-size: 0.8rem;
+                    color: $fontColor;
+                    width: 70%;
+                    display: flex;
+                    align-items: flex-start;
+                  }
+                  .comments-stats{
+                    font-size: 0.8rem;
+                    color: $fontColor;
+                    align-items: flex-end;
+                  }
+                }
+              }
+            }
+            .comment-section{
+              display: flex;
+              align-items: center;
+              textarea{
+                border:none;
+                height: 40px;
+                width: 100%;
+                border-radius: 20px;
+              }
+              .button-share{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                background: white;
+                height: 35px;
+                width: 35px;
+                font-size: 0.9rem;
+                border-radius: 50%;
+                margin: 3px;
+                .fa-share{
+                  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e88f4+0,32aeff+100,32aeff+100 */
+                  color: rgb(30,136,244); /* Old browsers */
+                  color: -moz-linear-gradient(-45deg, rgba(30,136,244,1) 0%, rgba(50,174,255,1) 100%, rgba(50,174,255,1) 100%); /* FF3.6-15 */
+                  color: -webkit-linear-gradient(-45deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                  color: linear-gradient(135deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e88f4', endColorstr='#32aeff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                }
+              }
+              .button-thumbsup{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                height: 35px;
+                width: 35px;
+                font-size: 0.9rem;
+                border-radius: 50%;
+                margin: 3px;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e88f4+0,32aeff+100,32aeff+100 */
+                background: rgb(30,136,244); /* Old browsers */
+                background: -moz-linear-gradient(-45deg, rgba(30,136,244,1) 0%, rgba(50,174,255,1) 100%, rgba(50,174,255,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(-45deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(135deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    #messenger{
+      overflow: hidden;
+      background: $messengerBackground;
+      position: relative;
+      -webkit-border-top-right-radius: 10px;
+      -webkit-border-bottom-right-radius: 10px;
+      -moz-border-radius-topright: 10px;
+      -moz-border-radius-bottomright: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      .title-section{
+        display: flex;
+        height: 53px;
+        width: 100%;
+        box-shadow: 0px 1px 4px 0px #2b2b2b;
+
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e88f4+0,32aeff+100,32aeff+100 */
+        background: rgb(30,136,244); /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(30,136,244,1) 0%, rgba(50,174,255,1) 100%, rgba(50,174,255,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        .icon{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20%;
+          .fab{
+            color: white;
+            padding: 0px 5px;
+            font-size: 1.2rem;
+          }
+        }
+        .title{
+          color: white;
+          font-size: 1rem;
+          font-weight: 400;
+          width: 60%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .dots{
+          color: white;
+          display: flex;
+          justify-content: flex-end;
+          font-size: 0.7rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20%;
+        }
+      }
+      .friends-section{
+        height: calc(100% - 106px);
+        overflow: auto;
+        .friend{
+          cursor: pointer;
+          display: flex;
+          padding: 12px;
+          &:hover{
+            .name{
+              opacity: 1;
+              font-weight: 600;
+            }
+            .user-image{
+              opacity: 1;
+            }
+          }
+          &.active{
+            .name{
+              opacity: 1;
+              font-weight: 600;
+            }
+            .user-image{
+              opacity: 1;
+            }
+            .chat-icon{
+              display: flex;
+            }
+          }
+          .name{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 70%;
+            font-size: 0.8rem;
+            color: white;
+            padding-left: 15px;
+            opacity: 0.8;
+            transition: all 0.3s ease-in-out;
+          }
+          .user-image{
+            display: flex;
+            padding: 5px;
+            opacity: 0.8;
+            transition: all 0.3s ease-in-out;
+            .status-icon{}
+          }
+          .chat-icon{
+            display: none;
+            justify-content: flex-end;
+            align-items: center;
+            width: 30%;
+            font-size: 1rem;
+            color: white;
+          }
+        }
+      }
+      .search-section{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        height: 53px;
+        width: 100%;
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-radius-bottomright: 10px;
+        border-bottom-right-radius: 10px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e88f4+0,32aeff+100,32aeff+100 */
+        background: rgb(30,136,244); /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(30,136,244,1) 0%, rgba(50,174,255,1) 100%, rgba(50,174,255,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(30,136,244,1) 0%,rgba(50,174,255,1) 100%,rgba(50,174,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        input[type="text"]{
+          border-radius: 20px;
+          width: 80%;
+          background-color: $messengerBackground;
+          border: none;
+          color: white;
+          height: 60%;
+          padding: 20px;
+          font-size: 1rem;
+          margin-bottom: 0;
+          &::placeholder{
+            color: #78b3ef;
+            opacity: 1;
+          }
+        }
+      }
+    }
+}
+#loading-screen{
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: $messengerBackground;
+  z-index: 20;
+  border-radius: 5px;
+  transform: translate3d(0, 100%, 0 );
+  transition: all 0.5s ease-in-out 0.5s;
+  &.active{
+    transform: translate3d(0, 0, 0 );
+    opacity: 1;
+
+  }
+  .loading-text{
+    font-size: 2rem;
+    color: white;
+    font-weight: 100;
+  }
+  @keyframes lds-eclipse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes lds-eclipse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.lds-eclipse {
+  position: relative;
+}
+.lds-eclipse div {
+  position: absolute;
+  -webkit-animation: lds-eclipse 1s linear infinite;
+  animation: lds-eclipse 1s linear infinite;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 #4658ac;
+  -webkit-transform-origin: 80px 82px;
+  transform-origin: 80px 82px;
+}
+.lds-eclipse {
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
+}

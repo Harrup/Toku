@@ -1,0 +1,23 @@
+@layout('layouts/app_react')
+
+@section('title')
+Toku - Home
+@endsection
+
+@section('notifications')
+  <div class="notification-message
+  @if(flashMessage('notification'))
+    active
+  @endif
+    ">
+    {{flashMessage('notification')}}
+  </div>
+@endsection
+
+@section('page-class')
+home-page
+@endsection
+
+@section('content-area')
+  <div id="app"></div>
+@endsection

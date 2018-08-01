@@ -1,0 +1,32 @@
+.app-container.home-page{
+  #content-container{
+    .content-area.profile{
+      .user-profile{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        height:100%;
+        .user-img{
+          img{
+            width: 100%;
+          }
+        }
+        .user-info{
+          padding: 20px;
+          h1{
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: $fontColor;
+          }
+          .follow-btn{
+            color: white;
+            background:linear-gradient(135deg, #1e88f4 0%, #32aeff 100%, #32aeff 100%);
+            padding: 10px 30px;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+}

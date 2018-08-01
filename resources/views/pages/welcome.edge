@@ -1,0 +1,28 @@
+@layout('layouts/emptyCanvas')
+
+@section('title')
+Toku - welcome
+@endsection
+
+@section('page-class')
+welcome-page
+@endsection
+
+@section('app-container-styling')
+background:url('https://images.unsplash.com/photo-1484712401471-05c7215830eb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=64a2622330a7ea8f0e1e73d32b8afa9d&auto=format&fit=crop&w=1650&q=80');background-position:center center;background-repeat:none;background-size:cover;
+@endsection
+
+@section('content')
+<div class="welcome-container">
+  <h1>Welcome to Toku</h1>
+  <h3>The best social media platform</h3>
+</div>
+<div class="authentication-box">
+  <div class="auth-container">
+    <div class="button google-btn">Google</div>
+    <div class="button facebook-btn">Facebook</div>
+    <hr>
+    <a href="/login" class="button email">Email</a>
+  </div>
+</div>
+@endsection

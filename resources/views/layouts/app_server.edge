@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>
+  @!section('title')
+  </title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+<body>
+  @!section('notifications')
+  <div class="app-container
+    @!section('page-class')
+  ">
+    <section id="left-menu">
+      <div class="account-dropdown">
+        <div class="logo"><i class="fab fa-typo3"></i></div>
+        <div class="name">Harrup Bamrah</div>
+        <div class="icon"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="groups">
+        <div class="group">
+          <div class="title">Title</div>
+          <ul>
+            <li><a href="/logout">logout</a></li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="content-container">
+      <div class="search-header">
+        <div class="search-box">
+          <input type="text" name="seach" placeholder="search toku">
+        </div>
+        <div class="icon-section">
+          <div class="icon">
+            <a><i class="fas fa-bell"></i></a>
+            <div class="noti ">3</div>
+          </div>
+          <div class="icon">
+            <a><i class="fas fa-comment"></i></a>
+            <div class="noti ">3</div>
+          </div>
+          <div class="icon">
+            <a><i class="fas fa-user"></i></a>
+            <div class="noti active">3</div>
+          </div>
+        </div>
+      </div>
+      <div class="content-area">
+        @!section('content-area')
+      </div>
+    </section>
+    <section id="messenger">
+      <div class="title-section">
+        <div class="icon"><i class="fab fa-facebook-messenger"></i></div>
+        <div class="title">Messenger</div>
+        <div class="dots"><i class="fas fa-ellipsis-v"></i></div>
+      </div>
+      <div class="friends-section">
+        <div class="friend active">
+          <div class="user-image" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…') no-repeat center center;
+          background-size: cover;height: 25px; width: 25px; border-radius:50%;">
+          </div>
+          <div class="name">Rodney Little</div>
+          <div class="chat-icon"><i class="fas fa-comment-dots"></i></div>
+        </div>
+
+        {{-- additional friends for testing --}}
+        <div class="friend ">
+          <div class="user-image" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…') no-repeat center center;
+          background-size: cover;height: 25px; width: 25px; border-radius:50%;">
+          </div>
+          <div class="name">Rodney Little</div>
+          <div class="chat-icon"><i class="fas fa-comment-dots"></i></div>
+        </div>
+
+        <div class="friend active">
+          <div class="user-image" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…') no-repeat center center;
+          background-size: cover;height: 25px; width: 25px; border-radius:50%;">
+          </div>
+          <div class="name">Rodney Little</div>
+          <div class="chat-icon"><i class="fas fa-comment-dots"></i></div>
+        </div>
+
+        <div class="friend ">
+          <div class="user-image" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…') no-repeat center center;
+          background-size: cover;height: 25px; width: 25px; border-radius:50%;">
+          </div>
+          <div class="name">Rodney Little</div>
+          <div class="chat-icon"><i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="friend ">
+          <div class="user-image" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…') no-repeat center center;
+          background-size: cover;height: 25px; width: 25px; border-radius:50%;">
+          </div>
+          <div class="name">Rodney Little</div>
+          <div class="chat-icon"><i class="fas fa-comment-dots"></i></div>
+        </div>
+
+        <div class="friend active">
+          <div class="user-image" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…') no-repeat center center;
+          background-size: cover;height: 25px; width: 25px; border-radius:50%;">
+          </div>
+          <div class="name">Rodney Little</div>
+          <div class="chat-icon"><i class="fas fa-comment-dots"></i></div>
+        </div>
+
+        <div class="friend ">
+          <div class="user-image" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…') no-repeat center center;
+          background-size: cover;height: 25px; width: 25px; border-radius:50%;">
+          </div>
+          <div class="name">Rodney Little</div>
+          <div class="chat-icon"><i class="fas fa-comment-dots"></i></div>
+        </div>
+
+      </div>
+      <div class="search-section">
+        <input type="text" name="search" placeholder="search" value="">
+      </div>
+
+    </section>
+  </div>
+  <script src="/js/components/vendor.js"></script>
+  <script src="/js/components/firstcomp.js"></script>
+</body>
+</html>
