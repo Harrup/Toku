@@ -8,16 +8,20 @@ export default class StatusArea extends Component {
     this.state = {};
   }
   postToDatabase = async () => {
-    try{
-      const post = await axios.post('/api/post', {
-      user_id: this.props.initialData.userInfo.id,
-      type: 'text',
-      content: this.state.status
-      })
-      console.log(post)
-    }
-    catch(error){
-      console.log(error)
+    if(this.state.status){
+      try{
+        const post = await axios.post('/api/post', {
+        user_id: this.props.initialData.userInfo.id,
+        type: 'text',
+        content: this.state.status
+        })
+        window.location.reload();
+      }
+      catch(error){
+        console.log(error)
+      }
+    }else{
+      console.log('please type some data')
     }
   }
   change = async (event) => {

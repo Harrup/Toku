@@ -50,7 +50,10 @@ class AuthController {
     const rules = {
       email: 'required|email|unique: users, email',
       password: 'required|min:6|max:40',
-      confirm_password: 'required'
+      confirm_password: 'required',
+      firstname:'required',
+      lastname:'required',
+      image_url:'required'
     }
 
     const validation = await validate(request.all(), rules)
@@ -70,8 +73,14 @@ class AuthController {
         try{
           let newUser = await User.create({
             email:request.input('email'),
-            password:request.input('password')
+            password:request.input('password'),
+            firstname:request.input('firstname'),
+            lastname:request.input('lastname'),
+            image_url:request.input('image_url')
           })
+          await auth.login(newUser)
+          session.flash({notification:'Welcome To Toku'})
+          return response.redirect('/')
         }
         catch(error){
           console.log(error)
@@ -81,8 +90,6 @@ class AuthController {
             ])
             .flashExcept(['password'])
         }
-        session.flash({notification:'Welcome To Toku'})
-        return response.redirect('/')
       }
     }else{
       //runs this code if passwords do not match

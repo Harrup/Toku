@@ -37,6 +37,7 @@ export default class LeftMenu extends Component {
                 </nav>
               </div>
             </div>
+            {/*  
             <div className="groups">
               <div className="group">
                 <div className="title">Title</div>
@@ -49,6 +50,7 @@ export default class LeftMenu extends Component {
                 </ul>
               </div>
             </div>
+            */}
           </section>
       );
     }

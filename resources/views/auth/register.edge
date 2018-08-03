@@ -17,7 +17,7 @@ auth-class
   <div class="auth-form">
     <h1>Toku</h1>
     <div class="message-box
-      @if(hasErrorFor('email')||hasErrorFor('password')||hasErrorFor('database'))
+      @if(hasErrorFor('email')||hasErrorFor('password')||hasErrorFor('database')||hasErrorFor('firstName')||hasErrorFor('lastName')||hasErrorFor('image_url'))
         active
       @endif
     ">
@@ -29,6 +29,15 @@ auth-class
       @endif
       @if(hasErrorFor('database'))
         {{getErrorFor('database')}}
+      @endif
+      @if(hasErrorFor('firstname'))
+        {{getErrorFor('firstname')}}
+      @endif
+      @if(hasErrorFor('lastname'))
+        {{getErrorFor('lastname')}}
+      @endif
+      @if(hasErrorFor('image_url'))
+        {{getErrorFor('image_url')}}
       @endif
     </div>
     <form action="/register" method="POST" class="default-form">
@@ -53,6 +62,30 @@ auth-class
         <label for="confirm_password">Confirm password:</label>
         <input type="password" name="confirm_password" value="" class="input-field
           @if(hasErrorFor('confirm_password'))
+            error
+          @endif
+        ">
+      </div>
+      <div class="form-grp">
+        <label for="firstname">First name:</label>
+        <input type="text" name="firstname" value="" class="input-field
+          @if(hasErrorFor('firstname'))
+            error
+          @endif
+        ">
+      </div>
+      <div class="form-grp">
+        <label for="lastname">Last name:</label>
+        <input type="text" name="lastname" value="" class="input-field
+          @if(hasErrorFor('lastname'))
+            error
+          @endif
+        ">
+      </div>
+      <div class="form-grp">
+        <label for="image_url">Image url:</label>
+        <input type="text" name="image_url" value="" class="input-field
+          @if(hasErrorFor('image_url'))
             error
           @endif
         ">

@@ -68,33 +68,45 @@ var StatusArea = function (_Component) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _context.prev = 0;
-              _context.next = 3;
+              if (!_this.state.status) {
+                _context.next = 13;
+                break;
+              }
+
+              _context.prev = 1;
+              _context.next = 4;
               return _axios2.default.post('/api/post', {
                 user_id: _this.props.initialData.userInfo.id,
                 type: 'text',
                 content: _this.state.status
               });
 
-            case 3:
+            case 4:
               post = _context.sent;
 
-              console.log(post);
-              _context.next = 10;
+              window.location.reload();
+              _context.next = 11;
               break;
 
-            case 7:
-              _context.prev = 7;
-              _context.t0 = _context["catch"](0);
+            case 8:
+              _context.prev = 8;
+              _context.t0 = _context["catch"](1);
 
               console.log(_context.t0);
 
-            case 10:
+            case 11:
+              _context.next = 14;
+              break;
+
+            case 13:
+              console.log('please type some data');
+
+            case 14:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, _this2, [[0, 7]]);
+      }, _callee, _this2, [[1, 8]]);
     }));
 
     _this.change = function () {
@@ -576,42 +588,6 @@ var LeftMenu = function (_Component) {
                 )
               )
             )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "groups" },
-            _react2.default.createElement(
-              "div",
-              { className: "group" },
-              _react2.default.createElement(
-                "div",
-                { className: "title" },
-                "Title"
-              ),
-              _react2.default.createElement(
-                "ul",
-                null,
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  _react2.default.createElement(
-                    "a",
-                    { href: "/logout" },
-                    "logout"
-                  )
-                ),
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  "Link"
-                ),
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  "Link"
-                )
-              )
-            )
           )
         );
       }
@@ -726,14 +702,13 @@ var Messenger = function (_Component) {
               _react2.default.createElement("i", { className: "fas fa-comment-dots" })
             )
           ),
-          "// additional friends for testing",
           _react2.default.createElement(
             "div",
             { className: "friend " },
             _react2.default.createElement("div", {
               className: "user-image",
               style: {
-                background: 'url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…") no-repeat center center',
+                background: 'url("https://tinyfac.es/data/avatars/B0298C36-9751-48EF-BE15-80FB9CD11143-500w.jpeg") no-repeat center center',
                 backgroundSize: "cover",
                 height: 25,
                 width: 25,
@@ -743,7 +718,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "name" },
-              "Rodney Little"
+              "Eli Adams"
             ),
             _react2.default.createElement(
               "div",
@@ -757,7 +732,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement("div", {
               className: "user-image",
               style: {
-                background: 'url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…") no-repeat center center',
+                background: 'url("https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?h=350&auto=compress&cs=tinysrgb") no-repeat center center',
                 backgroundSize: "cover",
                 height: 25,
                 width: 25,
@@ -767,7 +742,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "name" },
-              "Rodney Little"
+              "Virginia Watson"
             ),
             _react2.default.createElement(
               "div",
@@ -781,7 +756,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement("div", {
               className: "user-image",
               style: {
-                background: 'url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…") no-repeat center center',
+                background: 'url("https://d3iw72m71ie81c.cloudfront.net/female-17.jpg") no-repeat center center',
                 backgroundSize: "cover",
                 height: 25,
                 width: 25,
@@ -791,7 +766,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "name" },
-              "Rodney Little"
+              "Lauren Thomas"
             ),
             _react2.default.createElement(
               "div",
@@ -805,7 +780,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement("div", {
               className: "user-image",
               style: {
-                background: 'url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…") no-repeat center center',
+                background: 'url("https://images-na.ssl-images-amazon.com/images/M/MV5BMTAyNTAzMTA4OTJeQTJeQWpwZ15BbWU3MDA4NDI2Njk@._V1_UX172_CR0,0,172,256_AL_.jpg") no-repeat center center',
                 backgroundSize: "cover",
                 height: 25,
                 width: 25,
@@ -815,7 +790,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "name" },
-              "Rodney Little"
+              "Jackie Kaufman"
             ),
             _react2.default.createElement(
               "div",
@@ -829,7 +804,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement("div", {
               className: "user-image",
               style: {
-                background: 'url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…") no-repeat center center',
+                background: 'url("https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=14fb764d9ef775a25cc55bb578b9a483") no-repeat center center',
                 backgroundSize: "cover",
                 height: 25,
                 width: 25,
@@ -839,7 +814,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "name" },
-              "Rodney Little"
+              "Bent Kruse"
             ),
             _react2.default.createElement(
               "div",
@@ -853,7 +828,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement("div", {
               className: "user-image",
               style: {
-                background: 'url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5…&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c3…") no-repeat center center',
+                background: 'url("https://d3iw72m71ie81c.cloudfront.net/abcdef.jpg") no-repeat center center',
                 backgroundSize: "cover",
                 height: 25,
                 width: 25,
@@ -863,7 +838,7 @@ var Messenger = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "name" },
-              "Rodney Little"
+              "Viola Spicer"
             ),
             _react2.default.createElement(
               "div",
